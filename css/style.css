@@ -1,0 +1,2571 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'perpetuaBOLD';
+    src: url('../assets/fonts/perpetua/Perpetua_Bold_font.ttf');
+}
+
+@font-face {
+    font-family: 'perpetuaREGULAR';
+    src: url('../assets/fonts/perpetuaSgdaVersion/Perpetua.otf');
+}
+
+@font-face {
+    font-family: 'perpetuaTitlingMTBOLD';
+    src: url('../assets/fonts/perpetua-titling-mt/pertibd.ttf');
+}
+
+/* SECCION GLOBALES, BACKGROUND Y ESTILOS GENERALES*/
+html {
+    background-color: #EFEBE4;
+}
+
+a{text-decoration: none;}
+
+ul{ list-style-type: none;}
+
+.header__background{
+    background-color: #918367;
+}
+
+.main__background{background-color: #EFEBE4;}
+
+.footer__background{background-color: #918367;}
+
+/* rastreador de páginas */
+.track__Style__Color{
+    color: #596f91;
+}
+
+.track__Style{
+    font-family: 'perpetuaREGULAR';
+    font-size: 1.1rem;
+    color: #596f91;
+    letter-spacing: 1.7px;
+
+    margin-left: 0.7rem;
+    transition: 0.3s;
+}
+
+.track__Style:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* GRID GENERAL */
+header{
+    grid-area: header;
+    z-index: 2;
+}
+
+main{
+    grid-area: main;
+}
+
+footer{
+    grid-area: footer;
+    z-index: 2;
+}
+
+body{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 4.8875rem auto 15.625rem;
+    grid-template-areas: "header" "main" "footer";
+}
+
+/*SECTION HEADER*/
+body header{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+}
+
+/*LOGO Y SUBLOGO*/
+.header__Logo__Style{
+    font-family: "perpetuaTitlingMTBOLD";
+    font-size: 2.7rem;
+    letter-spacing: 3px;
+    color:#FFF7E8;
+    text-shadow: 0rem 0.125rem 0.188rem #00000054;
+    text-align: center;  
+    transition: 0.3s ease;
+
+    margin-top: 1rem;
+}
+
+.header__Sublogo__Style{
+    font-family: 'perpetuaREGULAR';
+    font-size: 1.3rem;
+    font-weight: lighter;
+    letter-spacing: 1.8px;
+    color: #FFF7E8;
+}
+
+/*Flotante wpp*/
+.float__wpp{
+    z-index: 2;
+}
+
+/*FOOTER SECTION*/
+footer{
+    width: 100%;
+}
+
+/* GRID FOOTER */
+.footer__Schedule__Grid__Area{
+    grid-area: Schedule;
+    justify-self: flex-start;
+    align-self: center;
+}
+
+.footer__Social__Grid__Area{
+    grid-area: Social;
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+/* Footer Style */
+.footer__Schedule__Title{
+    font-family: 'perpetuaTitlingMTBOLD';
+    font-size: 1.2rem;
+    text-align: left;
+    letter-spacing: 0.8px;
+    color: #FFF7E8;
+
+    padding: 1.25rem 0px 5px 10px;
+    margin: 0px 3px 0px 1.875rem;
+}
+
+.footer__Schedule__p{
+    font-family: 'perpetuaREGULAR';
+    font-size: 1.2rem;
+    text-align: left;
+    color: #FFF7E8;
+
+    padding: 3px 0px 5px 10px;
+    margin: 0px 3px 10px 1.875rem;
+}
+
+.section__Social__Title{
+    font-family: 'perpetuaTitlingMTBOLD';
+    font-size: 1rem;
+    text-align: left;
+    letter-spacing: 1px;
+    color: #FFF7E8;
+
+    padding: 8px 1px 2px 10px;
+    margin: 2px 1px 2px 1.875rem;
+}
+
+.section__Social__Instagram{
+    padding: 3px 2px 5px 10px;
+    margin-left: 2.8125rem;
+}
+
+.section__Social__Facebook{
+    padding: 3px 5px 5px 5px;
+}
+
+.footer__Maps__Style{
+    margin: 0.675rem 2.5rem 0rem 0rem;
+}
+
+
+.footer__Map__Style{
+    width: 18.75rem;
+    height: 12.5rem;
+}
+
+.footer__Copyright__Text{
+    font-family: 'perpetuaREGULAR';
+    font-size: 1rem;
+    letter-spacing: 0.4px;
+    color: #DED0B4;
+
+}
+
+.footer__Icon__Copyright{
+    width: 1rem;
+    height: 1rem;
+}
+
+/* INDEX INDEX INDEX INDEX INDEX */
+/* General Style */
+.track__Style__Color{
+    color: #596f91;
+}
+
+.track__Style{
+    font-family: 'perpetuaREGULAR';
+    font-size: 1.1rem;
+    color: #596f91;
+    letter-spacing: 1.7px;
+
+    margin-left: 0.7rem;
+    transition: 0.3s;
+}
+
+.track__Style:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Multimedia Grid */
+.main__Multimedia__Grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 65% 35%;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+    grid-template-areas: "video video" "leftImg rightImg";
+
+    max-width: 37rem;
+    max-height: 32.5rem;
+}
+
+.main__Multimedia__Video__Area{
+    grid-area: video;
+    justify-self: center;
+}
+
+.main__Multimedia__LeftImg__Area{
+    grid-area: leftImg;
+    justify-self: flex-end;
+}
+
+.main__Multimedia__RightImg__Area{
+    grid-area: rightImg;
+    justify-self: flex-start;
+}
+
+/* Style and Boxmodeling */
+.div__main__carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Style and Box Ojal y Boton*/
+.main__OjalYBoton__Title{
+    font-family: 'perpetuaTitlingMTBOLD';
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    color: #596f91;
+    text-align: center;
+}
+
+.main__OjalYBoton__p{
+    font-family: 'perpetuaREGULAR';
+    font-size: 1.8rem;
+    letter-spacing: 0.2px;
+    color: #596f91;
+    display: block;
+
+    padding-bottom: 0.7rem;
+}
+
+/* BUTTONS STYLE */
+.index__button{
+    font-family: 'perpetuaREGULAR';
+    text-align: center;
+    font-size: 1.3rem;
+    color:#FFF7E8;
+    
+    background-color: #918367d2;
+    border-color: #918367;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px #596f91bd;
+
+    width: 12rem;
+    height: 2.6rem;
+}
+
+/*CATALOGO CATALOGO CATALOGO CATALOGO */
+/* Flexbox Catalogo */
+.main__Filters__Flex__Box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0rem 1.1rem;
+}
+
+.main__Buttons__Flex{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Style Catalogo */
+.main__Filters__Style, .main__Products__Style{
+    font-family: 'perpetuaBOLD';
+    letter-spacing: 0.9px;
+    color: #596f91;
+}
+
+.main__img__Filter__Style{
+    width: 0.875rem;
+    height: 1rem;
+}
+
+.main__img__Order__Arrow{
+    width: 0.75rem;
+    height: 0.6rem;
+}
+
+.main__Products__Style{
+    text-align: center;
+    border: solid 0.07rem #918367;
+    border-radius: 5%;
+    box-shadow: 1px 1px 3px #0000006e;
+}
+
+.main__Buttons{
+    color: #596f91;
+    font-family: 'perpetuaBOLD';
+
+    border: none;
+    background-color: #EFEBE4;
+
+    padding: 0.2rem;
+    margin: 0.4rem;
+}
+
+@media screen and (min-width: 1025px){
+    /* SECCION GLOBALES, BACKGROUND Y ESTILOS GENERALES*/
+    ul li{
+        display: inline-block;
+    }
+
+    /*SECTION HEADER*/
+    .header__Menu__Mobile__Area{
+        display: none;
+    }
+
+    .header__Logos__Mobile__Area{
+        display: none;
+    }
+            
+    /* GRID HEADER */
+    .header__Logo__Grid__Area{
+        grid-area: Logo;
+        justify-self: flex-start;
+        align-self: flex-end;
+        margin-left: 1.875rem;
+    }
+
+    .header__Sublogo__Grid__Area{
+        grid-area: Sublogo;
+        justify-self: flex-start;
+        align-self: flex-start;
+        margin-left: 3.4rem;
+    }
+
+    .header__nav__Grid__Area{
+        grid-area: Nav;
+        align-self: flex-end;
+        justify-self: center;
+        width: 90%;
+    }
+
+    .header__Icons__Grid__Area{
+        grid-area: Icons;
+        align-self: flex-end;
+    }
+
+    .header__Grid{
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-rows: 3.125rem auto;
+        column-gap: 0.6rem;
+        grid-template-areas: "Logo Nav Icons" "Sublogo Nav Icons";
+    }
+
+    /*LOGO ANIMACION*/
+    .header__Logo__Style:hover{
+        color: #B4C5DE;
+        text-shadow: 0.1rem 0.2rem 0.2rem #0f0f0fb4;
+    }
+
+        /*MENU DE NAVEGACION*/
+    /* FLEXBOX, BOXMODEL, POSITION */
+    .nav__Menu__Flexbox{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: baseline;
+    }
+
+    .nav__menu__boxModel{
+        padding: 0px 3px;
+        margin: 2px 3px 7px 3px;
+    }
+
+    .nav__menu__catalogo__boxModel{
+        margin: 2px 0px 7px 3px;
+    }
+
+    .nav__Menu__Style{
+        font-family: 'perpetuaREGULAR';
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+        color: #FFF7E8;   
+    }
+
+    .nav__Menu__ArrowCream{
+        position: static;
+    }
+
+    .nav__Menu__ArrowLightBlue{
+        position: relative;
+        right: 1rem;
+        visibility: hidden;
+    }
+
+    .div__Icons__Flexbox{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+
+    .div__Icon__BoxModel{
+        padding: 0px 2px 0px 2px;
+        margin-bottom: 8px;
+    }
+
+    /*ANIMACIONES E INTERACCIONES DEL MENU*/
+    ul li a:hover {
+        color: #B4C5DE;
+        text-shadow: 0.05rem 0.12rem 0.15rem #0f0f0fb4;
+        cursor: pointer;    
+    }
+
+    ul li div:hover > .nav__Menu__ArrowLightBlue {
+        color: #B4C5DE;
+        visibility: visible;
+    }
+
+    /*SUBMENU DE CATALOGO*/
+    ul section li{
+        display: block; /*display elementos del submenu*/
+    } 
+
+    ul section {
+        display: inline-block; /*display secciones del submenu*/
+    } 
+
+    ul ul {
+        position: relative;
+        display: none;  
+    }
+
+    .nav__Menu__SubCatalogo__StyleAndPosition{
+        position: fixed;
+        top: 4.875rem; right: 0px; left: 0px; 
+        z-index: 2;
+        background-color: #918367bd;
+        padding: 1rem;
+
+        font-family: 'perpetuaREGULAR';
+        font-size: 1.25rem;
+        font-weight: lighter;
+        color: #FFF7E8;
+    }
+
+    .nav__Menu__SubCatalogo__Sections__Style{
+        padding: 0px 0.5rem;
+        margin: 0px 0.5rem;
+
+        text-align: left;
+    }
+
+    section li {
+        padding: 0.4rem;
+    }
+
+    /* animaciones submenu */
+    header nav ul li:hover > ul{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    section li:hover{
+        cursor: pointer;
+    }
+
+    /* Iconos header */
+    .div__Icon__Style{
+        cursor: pointer;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    /*Flotante wpp*/
+    .float__wpp{
+        position: fixed;
+        bottom: 1.6rem; right: 1.1rem;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    /*FOOTER SECTION*/
+    /* GRID FOOTER */
+    .footer__Maps__Grid__Area{
+        grid-area: Maps;
+        justify-self: flex-end;
+        align-self: center;
+    }
+
+    .footer__Copyright__Grid__Area{
+        grid-area: Copyright;
+        justify-self: center;
+        align-self: flex-start;
+    }
+
+    .footer__Grid{
+        display: grid;
+        grid-template-columns: 35% 30% 35%;
+        grid-template-rows: 45% 45% 10%;
+        column-gap: 0.6rem;
+        grid-template-areas: "Schedule Schedule Maps" "Social Social Maps" "Copyright Copyright Copyright";
+    }
+
+/* INDEX INDEX INDEX INDEX INDEX INDEX*/
+    .div__Mobile__Buttons__Area{
+        display: none;
+    }    
+
+    /* MAIN INDEX GRIDS */
+
+    /* main grid */
+    .index__Main__Carousel__Area{
+        grid-area: carousel;
+        justify-self: center;
+    }
+
+    .index__Main__Multimedia__Area{
+        grid-area: multimedia;
+        margin-left: 1rem;
+        justify-self: center;
+    }
+
+    .index__Main__Texts__Area{
+        grid-area: texts;
+        justify-self: center;
+    }
+
+    .index__Main__Grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1.5fr 1fr;
+        column-gap: 1rem;
+        row-gap: 1rem;
+        grid-template-areas: "carousel carousel" "multimedia texts";
+    }
+    
+    /* Text Grid */
+    .main__Texts__Grid{
+        height: 60%;
+        width: 90%;
+        display: grid;
+        grid-template-columns: 45% 27.5% 27.5%;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 0.5rem;
+        grid-template-areas: "title title title" "text text text" "leftButton rightButton rightButton";
+    }
+
+    .main__Texts__Title__Area{
+        grid-area: title;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .main__Texts__P__Area{
+        grid-area: text;
+        align-self: flex-start;
+        justify-self: center;
+    }
+
+    .main__Texts__BtnLeft__Area{
+        grid-area: leftButton;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .main__Texts__BtnRgt__Area{
+        grid-area: rightButton;
+        align-self: center;
+        justify-self: center;
+    }
+
+    /* Style and Boxmodeling */
+    .div__main__carousel{
+        width: 97%;
+    }
+
+    .main__Carousel{
+        height: 90%;
+        width: 85%;
+    }
+
+    /*Style and Box Ojal y Boton*/
+    .main__Multimedia__Box{
+        padding-top: 2rem;
+    }
+
+    .main__Multimedia__Video__Style{
+        width: 100%;
+        height: 100%;
+    }
+
+    .main__Multimedia__Img__Style{
+        width: 100%;
+        height: 100%;
+    }
+
+    .main__Texts__Box{
+        padding-top: 4rem;
+    }
+
+    .main__OjalYBoton__p{
+        width: 26.5rem;
+    }
+
+    /*Botones y animaciones*/
+    .index__Button__Right{
+        margin: 0.8rem 0rem 0rem 1.5rem;
+    }
+
+    .index__Button__Left{
+        margin: 0.8rem 1.5rem 0rem 0rem;
+    }
+
+    .index__button:hover{
+        cursor: pointer;
+        color: #596f91;
+        border-color: #596f91;
+        background-color: #B4C5DE;
+    }
+
+    /* CATALOGO CATALOGO CATALOGO CATALOGO */
+    .main__Mobile__Filters{
+        display: none;
+    }
+
+    /* GRID CATALOGO */
+    .main__Grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 2rem 3rem auto 5rem;
+        column-gap: 0.6rem;
+        row-gap: 0.6rem;
+        grid-template-areas: "track . . ." "filters filters filters filters" "products products products products"  ". buttons buttons .";
+    }
+
+    .main__Track__Grid__Area{
+        grid-area: track;
+        align-self: center;
+    }
+
+    .main__Filters__Grid__Area{
+        grid-area: filters;
+    }
+
+    .main__Products__Area{
+        grid-area: products;
+        justify-self: center;
+        align-items: center;
+    }
+
+    .main__buttons__Grid__Area{
+        grid-area: buttons;
+        justify-self: center;
+        align-self: center;
+    }
+
+    /* grid de productos */
+    .main__Products__Grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 0.4rem;
+    }
+
+    .main__Buttons__Flex{
+        width: 70%;
+    }  
+
+    /* Style Catalogo */
+     .main__Filters__Style{
+        font-size: 1.46rem;
+        border-bottom: solid 0.05rem #596f91;
+    }
+
+    .main__Products__Style{
+        font-size: 1.25rem;
+        
+        padding: 1rem;
+        margin: 0.5rem;
+        transition: 0.3s;
+    }
+
+    .main__Products__Img__Style{
+        width: 100%;
+    }
+
+    .main__Products__Style:hover{
+        background-color: #b4c5dec0;
+        box-shadow: 1.5px 1.5px 3px #000000b1;
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+    .main__Buttons{
+        font-size: 1.4rem;
+
+        padding: 0.2rem;
+        margin: 0.4rem;
+
+        transition: 0.3s ease;
+    }
+
+    .main__Buttons:hover{
+        cursor: pointer;
+        text-decoration: underline;
+        text-shadow: 0px 0.5px 2px #596f91;
+    }
+
+    /* OJAL BOTON OJAL BOTON OJAL BOTON OJAL BOTON */
+    /* GRIDS */
+    .main__Title__Carousel__Grid{
+        display: grid;
+        grid-template-rows: 0.5fr 6fr 0.5fr;
+        row-gap: 0.3rem;
+        grid-template-areas: "title" "main__carousel" "subtitle";
+    }
+
+    .main__Title__Area{
+        grid-area: title;
+        align-self: center;
+    }
+
+    .main__Carousel__Area{
+        width: 85%;
+        grid-area: main__carousel;
+        justify-self: center;
+        margin: 0rem 1rem;
+    }
+
+    .main__Subtitle__Area{
+        grid-area: subtitle;
+    }
+
+    .main__Secundary__Grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 2fr 1fr;
+        row-gap: 1.5rem;
+        grid-template-areas: "first__carousel first__text" "second__text second__carousel" "button button";
+
+        margin: 1.2rem 1rem 0rem 1rem;
+    }
+
+    .section__First__Carousel__Area{
+        grid-area: first__carousel;
+        justify-self: center;
+    }
+
+    .section__First__Text__Area{
+        grid-area: first__text;
+        align-self: center;
+    }
+
+    .section__Second__Carousel__Area{
+        grid-area: second__carousel;
+        justify-self: center;
+    }
+
+    .section__Second__Text__Area{
+        grid-area: second__text;
+        align-self: center;
+    }
+
+    .section__Button__Area{
+        grid-area: button;
+        justify-self: center;
+        align-self: center;
+    }
+
+    /* STYLES */
+    .main__Title__Subtitle{
+        font-size: 1.5rem;
+        font-family: 'perpetuaBOLD';
+        color: #596f91;
+        letter-spacing: 0.6px;
+
+        text-align: center;
+        margin: 0.4rem 0.5rem;
+    }
+
+    .main__Subtitle__Box{
+        padding-top: 0.8rem;
+    }
+
+    .main__Carousel{
+        width: 100%;
+        height: 100%;
+    }
+
+    .section__Secundary__Carousel{
+        width: 100%;
+        height: 100%;
+    }
+
+    .section__Carousels__Texts{
+        font-size: 1.5rem;
+        font-family: 'perpetuaREGULAR';
+        color: #596f91;
+        letter-spacing: 0.2px;
+        text-align: center;
+
+        padding: 0rem 0.8rem;
+        margin: 0.4rem;
+    }
+
+    .section__Button{
+        color:#FFF7E8;
+        background-color: #918367d2;
+        border-color: #918367;
+        box-shadow: 1px 1px 3px #596f91bd;
+    }
+
+  /* NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS */
+    /* GRIDS */
+    .main__Full__Grid{
+        display: grid;
+        grid-template-rows: 0.9fr 7fr 0.8fr;
+        row-gap: 1rem;
+        justify-items: center;
+        align-items: flex-start;
+        grid-template-areas: "title" "history" "subtitle";
+    }
+
+    .div__title__Area{
+        grid-area: title;
+    }
+
+    .main__Us__Area{
+        grid-area: history;
+    }
+
+    .div__Subtitle__Area{
+        grid-area: subtitle;
+    }
+
+    /* Us history grid */
+    .main__Us__Grid{
+        display: grid;
+        grid-template-columns: 15% 40% 45%;
+        grid-template-rows: 48% 18% 34%;
+        row-gap: 1.2rem;
+        justify-items: center;
+        align-items: center;
+        max-width: 95%;
+
+        grid-template-areas: "aside__first text__foundation first__image" "aside__second text__retirement text__retirement" "aside__third second__image text__today";
+        margin: 0rem 0.1rem 0.5rem 0.1rem;
+    }
+
+    .main__Aside__First__Area{
+        grid-area: aside__first;
+    }
+
+    .main__Aside__Second__Area{
+        grid-area: aside__second;
+    }
+
+    .main__Aside__Third__Area{
+        grid-area: aside__third;
+    }
+
+    .main__First__Img__Area{
+        grid-area: first__image;
+    }
+
+    .main__Text__Foundation__Area{
+        grid-area: text__foundation;
+    }
+
+    .main__Text__Retirement__Area{
+        grid-area: text__retirement;
+    }
+
+    .main__Second__Img__Area{
+        grid-area: second__image;
+    }
+
+    .main__Text__Today__Area{
+        grid-area: text__today;
+    }
+
+    /* Style */
+    .main__Title__Style{
+        display: block;
+        font-family: 'perpetuaBOLD';
+        font-size: 1.4rem;
+        color: #596f91;
+        letter-spacing: 0.7px;
+
+        text-align: center;
+        padding: 0.4rem 0.8rem;
+        margin: 0.5rem;
+    }
+
+    .main__Subtitle__Style{
+        display: block;
+        font-family: 'perpetuaBOLD';
+        font-size: 1.2rem;
+        color: #596f91;
+        letter-spacing: 0.4px;
+
+        text-align: center;
+        padding: 0.5rem 0.3rem;
+        margin: 0.4rem 0.3rem;
+    }
+
+    .main__Text__Style{
+        font-family: 'perpetuaREGULAR';
+        font-size: 1.2rem;
+        color: #596f91;
+        letter-spacing: 0.2px;
+
+        padding: 0.2rem;
+        margin: 0.1rem;
+    }
+
+    .aside__Date__Style{
+        font-family: 'perpetuaBOLD';
+        font-size: 1.2rem;
+        color: #596f91;
+        letter-spacing: 0.2px;
+
+        padding: 0.1rem;
+        margin: 0.1rem;
+    }
+
+    .first__Img__Style{
+        width: 90%;
+        height: 100%;
+    }
+
+    .second__Img__Style{
+        width: 90%;
+        height: 100%;
+    }
+
+  /* CONTACT CONTACT CONTACT CONTACT CONTACT */
+    /* GRIDS */
+    /* social grid */
+    .main__Section__Social__Grid{
+        display: grid;
+        grid-template-rows: 0.5fr 0.6fr 0.5fr;
+        row-gap: 0.2rem;
+        justify-items: center;
+        align-items: center;
+        grid-template-areas: "first__text" "social__icons" "second__text";
+    }
+    .section__Social__FirstText__Area{
+        grid-area: first__text;
+        
+    }
+    .section__Social__Icons__Area{
+        grid-area: social__icons;
+    }
+    .section__SecondText__Area{
+        grid-area: second__text;
+    }
+
+    .main__Form__Grid{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 0.5fr 0.5fr 1fr 1fr 1.5fr;
+        grid-template-rows: repeat(7, auto);
+        column-gap: 0.1rem;
+        row-gap: 0.5rem;
+        grid-template-areas: ". name name placeholder__name placeholder__name placeholder__name ." ". email email placeholder__email placeholder__email placeholder__email ." ". typeof typeof typeof merceria ojalyboton ." ". tel tel placeholder__tel placeholder__tel placeholder__tel ." ". consult consult textarea__consult textarea__consult textarea__consult ." ". text__robot text__robot . . clean ." ". fieldset__robot fieldset__robot . send send .";
+        margin-bottom: 1.5rem;
+    }
+    .form__Name__Area{
+        grid-area: name;
+        justify-self: center;
+    }
+    .form__Placeholder__Name__Area{
+        grid-area: placeholder__name;
+    }
+    .form__Email__Area{
+        grid-area: email;
+        justify-self: center;
+    }
+    .form__Placeholder__Email__Area{
+        grid-area: placeholder__email;
+    }
+    .form__TypeOf__Area{
+        grid-area: typeof;
+        justify-self: center;
+    }
+    .form__Input__Merceria__Area{
+        grid-area: merceria;
+    }
+    .form__Input__OjalYBoton__Area{
+        grid-area: ojalyboton;
+    }
+    .form__Tel__Area{
+        grid-area: tel;
+        justify-self: center;
+    }
+    .form__Placeholder__Tel__Area{
+        grid-area: placeholder__tel;
+    }
+    .form__Consult__Area{
+        grid-area: consult;
+        justify-self: center;
+    }
+    .form__TextArea__Consult__Area{
+        grid-area: textarea__consult;
+    }
+    .form__Input__Clean__Area{
+        grid-area: clean;
+        justify-self: center;
+        margin-right: 1rem;
+    }
+    .form__Text__Robot__Check{
+        grid-area: text__robot;
+    }
+    .form__Fieldset__Robot__Area{
+        grid-area: fieldset__robot;
+        justify-self: center;
+    }
+    .form__Input__Send__Area{
+        grid-area: send;
+        justify-self: center;
+    }
+
+    /* STYLES */
+    .main__Contact__Title__Style{
+        font-family: 'perpetuaBOLD';
+        font-size: 1.5rem;
+        color: #596f91;
+        text-align: center;
+        letter-spacing: 0.5px;
+
+        padding: 0.2rem 0.1rem;
+        margin: 0.3rem 0.2rem;
+    }
+
+    .section__Social__Text__Style{
+        font-family: 'perpetuaBOLD';
+        font-size: 1.2rem;
+        color: #596f91;
+        letter-spacing: 0.2px;
+        text-align: center;
+
+        padding: 0.5rem;
+        margin: 0.2rem;
+    }
+    .section__Social__Icons{
+        width: 2rem;
+        height: 2rem;
+        margin: 0rem 1rem;
+    }
+
+    .form__placeholder__style, .form__TextArea__Style{
+        background-color: #B4C5DE;
+        border: 1.5px solid #596f91;
+        opacity: 0.7;
+
+        font-family: 'perpetuaREGULAR';
+        font-size: 1rem;
+        max-width: 30rem;
+    }
+    .form__texts__style{
+        font-family: 'perpetuaBOLD';
+        font-size: 1.2rem;
+        color: #596f91;
+        letter-spacing: 0.2px;
+
+        margin-right: 0.2rem;
+    }
+
+    .form__label__Style, .form__Text__Robot__Style{
+        font-family: 'perpetuaREGULAR';
+        font-size: 1.1rem;
+        color: #596f91;
+        letter-spacing: 0.1px;
+    }
+    .form__fieldset__style{
+        background-color: #b4c5dece;
+        border: 1.5px solid #596f91;
+        max-width: 8rem;
+    }
+    .form__Text__Robot__Style{
+        text-align: center;
+    }
+
+    .form__Input__Clean__Style, .form__Input__Send__Style{
+        background-color: #b4c5dece;
+        border: 1px solid #596f91;
+        
+        font-family: 'perpetuaBOLD';
+        color: #596f91;
+    }
+
+    .form__Input__Clean__Style{
+        font-size: 1.1rem;
+        letter-spacing: 0.2px;
+        max-width: 4rem;
+        max-height: 1.5rem;
+    }
+
+    .form__Input__Send__Style{
+        font-size: 1.4rem;
+        letter-spacing: 0.4px;
+        max-width: 6rem;
+        max-height: 2rem;
+    }
+}
+
+@media screen and (min-width: 650px) and (max-width:1024px){
+    /* ESTILOS GENERALES */
+
+    /*SECTION HEADER*/
+    .header__Logo__Grid__Area{
+        display: none; /* logo desktop */
+    }
+
+    .header__Sublogo__Grid__Area{
+        display: none; /* sublogo desktop */
+    }
+            
+    /* GRID HEADER */
+    .header__Menu__Mobile__Area{
+        grid-area: Burger;
+        justify-self: center;
+    }
+
+    .header__Icons__Grid__Area{
+        grid-area: Icons;
+        align-self: flex-end;
+        justify-self: flex-end;
+    }
+
+    .header__Logos__Mobile__Area{
+        grid-area: Logos;
+        align-self: center;
+    }
+
+    .header__Grid{
+        display: grid;
+        grid-template-columns: 10% 20% 30% 40%;
+        grid-template-areas: "Burger Logos . Icons";
+    }
+
+    /*LOGO ANIMACION*/
+    .header__Logo__Style:hover{
+        color: #B4C5DE;
+        text-shadow: 0.1rem 0.2rem 0.2rem #0f0f0fb4;
+    }
+
+    /*SUBLOGO*/
+    .header__Sublogo__Style{
+        margin-left: 1.6rem;
+    }
+
+    /*MENU BURGER AND NAV*/
+    .header__nav__Grid__Area{
+        display:none;
+    }
+
+    .Mobile__header__Burger__Style{
+        width: 2.6rem;
+        height: 2.6rem;
+
+        margin-top: 0.7rem;
+    }
+
+    /* Iconos header */
+    .div__Icon__Style{
+        cursor: pointer;
+        width: 1.7rem;
+        height: 1.7rem;
+
+        margin: 0rem 1.2rem 0.4rem 0rem;
+    }
+
+    /*Flotante wpp*/
+    .float__wpp{
+        position: fixed;
+        bottom: 1.5rem; right: 1.2rem;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    /*FOOTER SECTION*/
+    /* GRID FOOTER */
+    .footer__Maps__Grid__Area{
+        grid-area: Maps;
+        justify-self: flex-end;
+        align-self: center;
+    }
+
+    .footer__Copyright__Grid__Area{
+        grid-area: Copyright;
+        justify-self: center;
+        align-self: flex-start;
+    }
+
+    .footer__Grid{
+        display: grid;
+        grid-template-columns: 35% 15% 15% 35%;
+        grid-template-rows: 45% 45% 10%;
+        column-gap: 0.6rem;
+        grid-template-areas: "Schedule Schedule Maps Maps" "Social Social Maps Maps" "Copyright Copyright Copyright Copyright";
+    }
+
+    /* INDEX INDEX INDEX INDEX INDEX INDEX*/
+    .main__Texts__BtnRgt__Area, .main__Texts__BtnLeft__Area{
+        display: none;
+    } 
+
+    /* MAIN INDEX GRIDS */
+    /* main grid */
+    .index__Main__Carousel__Area{
+        grid-area: carousel;
+    }
+
+    .index__Main__Multimedia__Area{
+        grid-area: multimedia;
+    }
+
+    .index__Main__Texts__Area{
+        grid-area: texts;
+    }
+
+    .index__Main__Grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3 1fr);
+        column-gap: 1rem;
+        row-gap: 1rem;
+        grid-template-areas: "carousel" "multimedia" "texts";
+    }
+
+    .main__Multimedia__Grid{
+        width: 80%;
+        justify-self: center;
+    }
+
+    /* Text Grid */
+    .main__Texts__Grid{
+        display: grid;
+        grid-template-columns: 45% 27.5% 27.5%;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 0.5rem;
+        grid-template-areas: "title title title" "text text text" "buttons buttons buttons";
+    }
+
+    .main__Texts__Title__Area{
+        grid-area: title;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .main__Texts__P__Area{
+        grid-area: text;
+        align-self: flex-start;
+        justify-self: center;
+    }
+
+    .div__Mobile__Buttons__Area{
+        grid-area: buttons;
+        justify-self: center;
+    }
+
+    /* Style and Boxmodeling */
+    .main__Carousel{
+        width: 85%;
+        height: 90%;
+
+        margin-top: 0.3rem;
+    }
+
+    /*Style and Box Ojal y Boton*/
+    .main__Multimedia__Box{
+        padding-top: 2rem;
+    }
+
+    .main__Multimedia__Video__Style{
+        width: 100%;
+        height: 20rem;
+    }
+
+    .main__Multimedia__Img__Style{
+        width: 100%;
+        height: 100%;
+    }
+
+    .main__Texts__Box{
+        padding-top: 4rem;
+    }
+
+    .main__OjalYBoton__p{
+        text-align: center;
+
+        width: 28.5rem;
+    }
+
+    /*Botones y animaciones*/
+    .index__Button__Left, .index__Button__Right{
+        margin-top: 0.5rem;
+    }
+
+    .index__Button__Left{
+        margin-right: 1.2rem;
+    }
+
+    .index__Button__Right{
+        margin-left: 1.2rem;
+    }
+
+    .index__button:hover{
+        cursor: pointer;
+        color: #596f91;
+        border-color: #596f91;
+        background-color: #B4C5DE;
+    }
+
+    /* CATALOGO CATALOGO CATALOGO CATALOGO */
+    .main__Mobile__Filters{
+        display: none;
+    }
+
+    /* GRID CATALOGO */
+    .main__Grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 2rem 3rem auto 5rem;
+        column-gap: 0.6rem;
+        row-gap: 0.6rem;
+        grid-template-areas: "track . . ." "filters filters filters filters" "products products products products" "buttons buttons buttons buttons";
+    }
+
+    .main__Track__Grid__Area{
+        grid-area: track;
+        align-self: center;
+    }
+
+    .main__Filters__Grid__Area{
+        grid-area: filters;
+    }
+
+    .main__Products__Area{
+        grid-area: products;
+        width: 95%;
+        justify-self: center;
+        align-items: center;
+    }
+
+    .main__buttons__Grid__Area{
+        grid-area: buttons;
+        justify-self: center;
+        align-self: center;
+    }
+
+    /* grid de productos */
+    .main__Products__Grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 0.3rem;
+    }
+
+    /* Flexbox Catalogo */
+    .main__Filters__Flex__Box{
+        margin: 0rem 1.1rem;
+    }
+
+    /* Style Catalogo */
+    .main__Filters__Style{
+        font-size: 1.46rem;
+        border-bottom: solid 0.05rem #596f91;
+    }
+
+    .main__Products__Img__Style{
+        width: 80%;
+    }
+
+    .main__Products__Style{
+        font-size: 1.25rem;
+        
+        padding: 1rem;
+        margin: 0.5rem;
+        transition: 0.3s;
+    }
+
+    .main__Products__Style:hover{
+        background-color: #b4c5dec0;
+        box-shadow: 1.5px 1.5px 3px #000000b1;
+        padding: 1.5rem;
+        cursor: pointer;
+
+        font-size: 1.36rem;
+    }
+
+    .main__Buttons{
+        font-size: 1.4rem;
+
+        padding: 0.2rem;
+        margin: 0.4rem;
+
+        transition: 0.3s ease;
+    }
+
+    .main__Buttons:hover{
+        cursor: pointer;
+        text-decoration: underline;
+        text-shadow: 0px 0.5px 2px #596f91;
+    }
+
+
+  /* OJAL BOTON OJAL BOTON OJAL BOTON OJAL BOTON */
+    /* GRIDS */
+    .main__Title__Carousel__Grid{
+        display: grid;
+        grid-template-rows: 0.5fr 5fr 0.5fr;
+        row-gap: 0.3rem;
+        grid-template-areas: "title" "main__carousel" "subtitle";
+    }
+
+    .main__Title__Area{
+        grid-area: title;
+        align-self: center;
+    }
+
+    .main__Carousel__Area{
+        grid-area: main__carousel;
+        width: 90%;
+        justify-self: center;
+        margin: 0rem 1rem;
+    }
+
+    .main__Subtitle__Area{
+        grid-area: subtitle;
+    }
+
+    .main__Secundary__Grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 2fr 1fr;
+        row-gap: 1.5rem;
+        grid-template-areas: "first__carousel first__text" "second__text second__carousel" "button button";
+
+        margin: 1.2rem 1rem 0rem 1rem;
+    }
+
+    .section__First__Carousel__Area{
+        grid-area: first__carousel;
+        justify-self: center;
+    }
+
+    .section__First__Text__Area{
+        grid-area: first__text;
+        align-self: center;
+    }
+
+    .section__Second__Carousel__Area{
+        grid-area: second__carousel;
+        justify-self: center;
+    }
+
+    .section__Second__Text__Area{
+        grid-area: second__text;
+        align-self: center;
+    }
+
+    .section__Button__Area{
+        grid-area: button;
+        justify-self: center;
+        align-self: center;
+    }
+
+    /* STYLES */
+    .main__Title__Subtitle{
+        font-size: 1.5rem;
+        font-family: 'perpetuaBOLD';
+        color: #596f91;
+        letter-spacing: 0.6px;
+
+        text-align: center;
+        margin: 0.4rem 0.5rem;
+    }
+
+    .main__Subtitle__Box{
+        padding-top: 0.8rem;
+    }
+
+    .main__Carousel{
+        width: 100%;
+        height: 100%;
+    }
+
+    .section__Secundary__Carousel{
+        width: 100%;
+        height: 100%;
+    }
+
+    .section__Carousels__Texts{
+        font-size: 1.5rem;
+        font-family: 'perpetuaREGULAR';
+        color: #596f91;
+        letter-spacing: 0.2px;
+        text-align: center;
+
+        padding: 0rem 0.8rem;
+        margin: 0.4rem;
+    }
+
+    .section__Button{
+        color:#FFF7E8;
+        background-color: #918367d2;
+        border-color: #918367;
+        box-shadow: 1px 1px 3px #596f91bd;
+    }
+
+  /* NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS */
+    /* GRIDS */
+    .main__Full__Grid{
+        display: grid;
+        grid-template-rows: 0.9fr 7fr 0.8fr;
+        row-gap: 1rem;
+        justify-items: center;
+        align-items: flex-start;
+        grid-template-areas: "title" "history" "subtitle";
+    }
+
+    .div__title__Area{
+        grid-area: title;
+    }
+
+    .main__Us__Area{
+        grid-area: history;
+    }
+
+    .div__Subtitle__Area{
+        grid-area: subtitle;
+    }
+
+    /* Us history grid */
+    .main__Us__Grid{
+        display: grid;
+        grid-template-columns: 15% 45% 40%;
+        grid-template-rows: 37% 18% 45%;
+        row-gap: 0.9rem;
+        justify-items: center;
+        align-items: center;
+
+        grid-template-areas: "aside__first text__foundation first__image" "aside__second text__retirement text__retirement" "aside__third second__image text__today";
+        margin: 0rem 0.1rem 0.5rem 0.1rem;
+    }
+
+    .main__Aside__First__Area{
+        grid-area: aside__first;
+    }
+
+    .main__Aside__Second__Area{
+        grid-area: aside__second;
+    }
+
+    .main__Aside__Third__Area{
+        grid-area: aside__third;
+    }
+
+    .main__First__Img__Area{
+        grid-area: first__image;
+    }
+
+    .main__Text__Foundation__Area{
+        grid-area: text__foundation;
+    }
+
+    .main__Text__Retirement__Area{
+        grid-area: text__retirement;
+    }
+
+    .main__Second__Img__Area{
+        grid-area: second__image;
+    }
+
+    .main__Text__Today__Area{
+        grid-area: text__today;
+    }
+
+    /* Style */
+    .main__Title__Style{
+        display: block;
+        font-family: 'perpetuaBOLD';
+        font-size: 1.4rem;
+        color: #596f91;
+        letter-spacing: 0.7px;
+
+        text-align: center;
+        padding: 0.4rem;
+        margin: 0.3rem;
+    }
+
+    .main__Subtitle__Style{
+        display: block;
+        font-family: 'perpetuaBOLD';
+        font-size: 1.2rem;
+        color: #596f91;
+        letter-spacing: 0.4px;
+
+        text-align: center;
+        padding: 0.5rem 0.3rem;
+        margin: 0.4rem 0.3rem;
+    }
+
+    .main__Text__Style{
+        font-family: 'perpetuaREGULAR';
+        font-size: 1.2rem;
+        color: #596f91;
+        letter-spacing: 0.2px;
+
+        padding: 0.2rem;
+        margin: 0.1rem;
+    }
+
+    .aside__Date__Style{
+        font-family: 'perpetuaBOLD';
+        font-size: 1.2rem;
+        color: #596f91;
+        letter-spacing: 0.2px;
+
+        padding: 0.1rem;
+        margin: 0.1rem;
+    }
+
+    .first__Img__Style{
+        width: 90%;
+        height: 100%;
+    }
+
+    .second__Img__Style{
+        width: 90%;
+        height: 100%;
+    }
+
+  /* CONTACT CONTACT CONTACT CONTACT CONTACT */
+    /* GRIDS */
+    /* social grid */
+    .main__Section__Social__Grid{
+        display: grid;
+        grid-template-rows: 0.5fr 0.6fr 0.5fr;
+        row-gap: 0.2rem;
+        justify-items: center;
+        align-items: center;
+        grid-template-areas: "first__text" "social__icons" "second__text";
+    }
+    .section__Social__FirstText__Area{
+        grid-area: first__text;
+        
+    }
+    .section__Social__Icons__Area{
+        grid-area: social__icons;
+    }
+    .section__SecondText__Area{
+        grid-area: second__text;
+    }
+
+    .main__Form__Grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(7, auto);
+        column-gap: 0.1rem;
+        row-gap: 0.5rem;
+        grid-template-areas: ". name name placeholder__name placeholder__name placeholder__name ." ". email email placeholder__email placeholder__email placeholder__email ." ". typeof typeof typeof merceria ojalyboton ." ". tel tel placeholder__tel placeholder__tel placeholder__tel ." ". consult consult textarea__consult textarea__consult textarea__consult ." ". text__robot text__robot . clean clean ." ". fieldset__robot fieldset__robot . send send .";
+        margin-bottom: 1.5rem;
+    }
+    .form__Name__Area{
+        grid-area: name;
+        justify-self: center;
+    }
+    .form__Placeholder__Name__Area{
+        grid-area: placeholder__name;
+    }
+    .form__Email__Area{
+        grid-area: email;
+        justify-self: center;
+    }
+    .form__Placeholder__Email__Area{
+        grid-area: placeholder__email;
+    }
+    .form__TypeOf__Area{
+        grid-area: typeof;
+        justify-self: center;
+    }
+    .form__Input__Merceria__Area{
+        grid-area: merceria;
+    }
+    .form__Input__OjalYBoton__Area{
+        grid-area: ojalyboton;
+    }
+    .form__Tel__Area{
+        grid-area: tel;
+        justify-self: center;
+    }
+    .form__Placeholder__Tel__Area{
+        grid-area: placeholder__tel;
+    }
+    .form__Consult__Area{
+        grid-area: consult;
+        justify-self: center;
+    }
+    .form__TextArea__Consult__Area{
+        grid-area: textarea__consult;
+    }
+    .form__Input__Clean__Area{
+        grid-area: clean;
+        justify-self: flex-end;
+        margin-right: 1rem;
+    }
+    .form__Text__Robot__Check{
+        grid-area: text__robot;
+    }
+    .form__Fieldset__Robot__Area{
+        grid-area: fieldset__robot;
+        justify-self: center;
+    }
+    .form__Input__Send__Area{
+        grid-area: send;
+        justify-self: center;
+    }
+
+    /* STYLES */
+    .main__Contact__Title__Style{
+        font-family: 'perpetuaBOLD';
+        font-size: 1.5rem;
+        color: #596f91;
+        text-align: center;
+        letter-spacing: 0.5px;
+
+        padding: 0.2rem 0.1rem;
+        margin: 0.3rem 0.2rem;
+    }
+
+    .section__Social__Text__Style{
+        font-family: 'perpetuaBOLD';
+        font-size: 1.2rem;
+        color: #596f91;
+        letter-spacing: 0.2px;
+        text-align: center;
+
+        padding: 0.5rem;
+        margin: 0.2rem;
+    }
+    .section__Social__Icons{
+        width: 2rem;
+        height: 2rem;
+        margin: 0rem 1rem;
+    }
+
+    .form__placeholder__style, .form__TextArea__Style{
+        background-color: #B4C5DE;
+        border: 1.5px solid #596f91;
+        opacity: 0.7;
+
+        font-family: 'perpetuaREGULAR';
+        font-size: 1rem;
+    }
+    .form__texts__style{
+        font-family: 'perpetuaBOLD';
+        font-size: 1.2rem;
+        color: #596f91;
+        letter-spacing: 0.2px;
+
+        margin-right: 0.2rem;
+    }
+
+    .form__label__Style, .form__Text__Robot__Style{
+        font-family: 'perpetuaREGULAR';
+        font-size: 1.1rem;
+        color: #596f91;
+        letter-spacing: 0.1px;
+        max-width: 22rem;
+    }
+
+    .form__fieldset__style{
+        background-color: #b4c5dece;
+        border: 1.5px solid #596f91;
+        max-width: 8rem;
+    }
+    .form__Text__Robot__Style{
+        text-align: center;
+    }
+
+    .form__Input__Clean__Style, .form__Input__Send__Style{
+        background-color: #b4c5dece;
+        border: 1px solid #596f91;
+        
+        font-family: 'perpetuaBOLD';
+        color: #596f91;
+    }
+
+    .form__Input__Clean__Style{
+        font-size: 1.1rem;
+        letter-spacing: 0.2px;
+        max-width: 4rem;
+        max-height: 1.5rem;
+    }
+
+    .form__Input__Send__Style{
+        font-size: 1.4rem;
+        letter-spacing: 0.4px;
+        max-width: 6rem;
+        max-height: 2rem;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width:650px){
+
+    /*SECTION HEADER*/
+    .div__Icon__Temporary__Mobile{
+        display: none; /* iconos que no quiero en el header, sino en el burger */
+    }
+
+    .header__Logo__Grid__Area{
+        display: none; /* logo desktop */
+    }
+
+    .header__Sublogo__Grid__Area{
+        display: none; /* sublogo desktop */
+    }
+            
+    /* GRID HEADER */
+    .header__Menu__Mobile__Area{
+        grid-area: Burger;
+        justify-self: center;
+    }
+
+    .header__Logos__Mobile__Area{
+        grid-area: Logos;
+        align-self: center;
+    }
+
+    .div__Icons__Mobile__Area{
+        grid-area: Icons;
+        align-self: center;
+        justify-self: flex-end;
+    }
+
+    .header__Grid{
+        display: grid;
+        grid-template-columns: 18% 42% 40%;
+        grid-template-areas: "Burger Logos Icons";
+    }
+
+    /*SUBLOGO*/
+    .header__Sublogo__Style{
+        margin-left: 1.6rem;
+    }
+
+    /*MENU BURGER AND NAV*/
+    .header__nav__Grid__Area{
+        display:none;
+    }
+
+    .Mobile__header__Burger__Style{
+        width: 2.6rem;
+        height: 2.6rem;
+
+        margin-top: 0.7rem;
+    }
+    
+    /* Iconos header */
+    .div__Icon__Style{
+        width: 1.7rem;
+        height: 1.7rem;
+
+        margin-right: 1.2rem;
+    }
+
+    /*Flotante wpp*/
+    .float__wpp{
+        position: fixed;
+        bottom: 1rem; right: 1rem;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    /*FOOTER SECTION*/
+    .footer__Maps__Grid__Area{
+        display: none;
+    }
+
+    /* GRID FOOTER */
+    .footer__Copyright__Grid__Area{
+        grid-area: Copyright;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .footer__Grid{
+        display: grid;
+        grid-template-rows: 45% 35% 20%;
+        row-gap: 0.3rem;
+        grid-template-areas: "Schedule" "Social" "Copyright";
+    }
+
+    /* Footer Styte */
+    .footer__Schedule__Title{
+        margin-left: 0.5rem;
+    }
+
+    .footer__Schedule__p{
+        margin-left: 0.5rem;
+    }
+
+    .section__Social__Title{
+        margin-left: 0.5rem;
+    }
+
+    .footer__Copyright__Text{
+        font-size: 0.8rem;
+    }
+
+    .footer__Icon__Copyright{
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+
+/* INDEX INDEX INDEX INDEX INDEX INDEX*/
+
+    .main__Texts__BtnRgt__Area, .main__Texts__BtnLeft__Area{
+        display: none;
+    }
+
+    /* MAIN INDEX GRIDS */
+    /* main grid */
+    .index__Main__Carousel__Area{
+        grid-area: carousel;
+    }
+
+    .index__Main__Multimedia__Area{
+        grid-area: multimedia;
+    }
+
+    .index__Main__Texts__Area{
+        grid-area: texts;
+    }
+
+    .index__Main__Grid{
+        display: grid;
+        grid-template-rows: 25rem 32rem 28rem;
+        row-gap: 0.2rem;
+        grid-template-areas: "carousel" "multimedia" "texts";
+    }
+
+    /* Text Grid */
+    .main__Texts__Grid{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 0.5rem;
+        grid-template-areas: "title" "text" "buttons";
+    }
+
+    .main__Texts__Title__Area{
+        grid-area: title;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .main__Texts__P__Area{
+        grid-area: text;
+        justify-self: center;
+    }
+
+    .div__Mobile__Buttons__Area{
+        grid-area: buttons;
+        justify-self: center;
+    }
+
+    /* Style and Boxmodeling */
+    .main__Carousel{
+        height: 20rem;
+        width: 90%;
+    }
+
+    /*Style and Box Ojal y Boton*/
+    .main__Multimedia__Box{
+        margin: 0.8rem 1rem 0rem 1rem
+    }
+
+    .main__Multimedia__Video__Style{
+        width: 30.15rem;
+        height: 19.7rem;
+    }
+
+    .main__Multimedia__Img__Style{
+        width: 14.8rem;
+        height: 10rem;
+    }
+
+    .main__Texts__Box{
+        padding-top: 0.4rem;
+    }
+
+    .main__OjalYBoton__p{
+        text-align: center;
+
+        width: 28.5rem;
+    }
+
+    /*BUTTONS*/
+    .index__Button__Left, .index__Button__Right{
+        margin-top: 0.5rem;
+    }
+
+    .index__Button__Left{
+        margin-right: 1.2rem;
+    }
+
+    .index__Button__Right{
+        margin-left: 1.2rem;
+    }
+
+
+  /* CATALOGO CATALOGO CATALOGO CATALOGO */
+    .main__Desktop__Filter, .main__Desktop__Order, .main__Products__Mobile__Display{
+        display: none;
+    }
+
+    /* GRID CATALOGO */
+    .main__Grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3rem auto 5rem;
+        column-gap: 0.2rem;
+        row-gap: 0.2rem;
+        grid-template-areas: "filters" "products" "buttons";
+    }
+
+    .main__Track__Grid__Area{
+        display: none;
+    }
+
+    .main__Filters__Grid__Area{
+        grid-area: filters;
+    }
+
+    .main__Products__Area{
+        grid-area: products;
+        width: 95%;
+        justify-self: center;
+        align-items: center;
+    }
+
+    .main__buttons__Grid__Area{
+        grid-area: buttons;
+        justify-self: center;
+        align-self: center;
+    }
+
+    /* Grid productos */
+    .main__Products__Grid{
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 0.5rem;
+
+        margin-top: 0.6rem;
+        justify-items: center;
+    }
+
+    /* Flexbox Catalogo */
+    .main__Filters__Flex__Box{
+        margin: 0rem 0.5rem;
+    }
+
+    .main__Products__Row__Flex{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    /* Style Catalogo */
+    .main__Mobile__Filters{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .main__img__Filter__Style{
+        margin-left: 0.3rem;
+    }
+
+    .main__Filters__Style{
+        font-size: 1.2rem;
+        border-bottom: solid 0.05rem #596f91;
+    }
+
+    .main__Products__Style{
+        font-size: 1.1rem;
+       
+        width: 90%;
+        margin: 0.2rem;
+    }
+
+    .main__Products__Img__Style{
+        margin: 0.3rem;
+    }
+
+    .main__Buttons{
+        font-size: 1rem;
+
+        padding: 0.2rem;
+        margin: 0.4rem;
+    }
+
+    .main__Buttons__Arrows{
+        width: 0.6rem;
+        height: 0.6rem;
+    }
+
+
+  /* OJAL BOTON OJAL BOTON OJAL BOTON OJAL BOTON */
+    /* GRIDS */
+    .main__Title__Carousel__Grid{
+        display: grid;
+        grid-template-rows: 0.5fr 3fr 0.5fr;
+        row-gap: 0.3rem;
+        grid-template-areas: "title" "main__carousel" "subtitle";
+    }
+
+    .main__Title__Area{
+        grid-area: title;
+        align-self: center;
+    }
+
+    .main__Carousel__Area{
+        grid-area: main__carousel;
+        width: 90%;
+        justify-self: center;
+        margin: 0rem 0.6rem;
+    }
+
+    .main__Subtitle__Area{
+        grid-area: subtitle;
+    }
+
+    .main__Secundary__Grid{
+        display: grid;
+        grid-template-rows: 30% 20% 30% 10% 10%;
+        row-gap: 0.3rem;
+        grid-template-areas: "first__carousel" "first__text" "second__carousel" "second__text" "button";
+
+        justify-items: center;
+        margin: 1.2rem 0rem;
+    }
+
+    .section__First__Carousel__Area{
+        grid-area: first__carousel;
+        justify-self: center;
+    }
+
+    .section__First__Text__Area{
+        grid-area: first__text;
+        align-self: center;
+    }
+
+    .section__Second__Carousel__Area{
+        grid-area: second__carousel;
+        justify-self: center;
+    }
+
+    .section__Second__Text__Area{
+        grid-area: second__text;
+    }
+
+    .section__Button__Area{
+        grid-area: button;
+        justify-self: center;
+        align-self: flex-start;
+    }
+
+    /* STYLES */
+    .main__Title__Subtitle{
+        font-size: 1.2rem;
+        font-family: 'perpetuaBOLD';
+        color: #596f91;
+        letter-spacing: 0.6px;
+
+        text-align: center;
+        margin: 0.4rem 0.5rem;
+    }
+
+    .main__Subtitle__Box{
+        padding-top: 0.8rem;
+    }
+
+    .main__Carousel{
+        width: 100%;
+        height: 100%;
+    }
+
+    .section__Secundary__Carousel{
+        width: 100%;
+        height: 100%;
+    }
+
+    .section__Carousels__Texts{
+        font-size: 1.2rem;
+        font-family: 'perpetuaREGULAR';
+        color: #596f91;
+        letter-spacing: 0.2px;
+        text-align: center;
+
+        margin: 0.4rem 0.3rem;
+    }
+
+    .section__Button{
+        color:#FFF7E8;
+        background-color: #918367d2;
+        border-color: #918367;
+        box-shadow: 1px 1px 3px #596f91bd;
+    }
+
+  /* NOSOTROS NOSOTROS NOSOTROS NOSOTROS NOSOTROS */
+    /* GRIDS */
+    .main__Full__Grid{
+        display: grid;
+        grid-template-rows: 0.3fr 9.2fr 0.7fr;
+        row-gap: 0.4rem;
+        justify-items: center;
+        align-items: flex-start;
+        grid-template-areas: "title" "history" "subtitle";
+    }
+
+    .div__title__Area{
+        grid-area: title;
+    }
+
+    .main__Us__Area{
+        grid-area: history;
+    }
+
+    .div__Subtitle__Area{
+        grid-area: subtitle;
+    }
+
+    /* Us history grid */
+    .main__Us__Grid{
+        display: grid;
+        grid-template-columns: 15% 85%;
+        grid-template-rows: 25% 12% 18% 25% 20%;
+        row-gap: 0.9rem;
+        justify-items: center;
+
+        grid-template-areas: "aside__first first__image" "aside__first text__foundation" "aside__second text__retirement" "aside__third second__image" "aside__third text__today";
+        margin: 0rem 0.1rem 0.5rem 0.1rem;
+    }
+
+    .main__Aside__First__Area{
+        grid-area: aside__first;
+    }
+
+    .main__Aside__Second__Area{
+        grid-area: aside__second;
+    }
+
+    .main__Aside__Third__Area{
+        grid-area: aside__third;
+    }
+
+    .main__First__Img__Area{
+        grid-area: first__image;
+    }
+
+    .main__Text__Foundation__Area{
+        grid-area: text__foundation;
+    }
+
+    .main__Text__Retirement__Area{
+        grid-area: text__retirement;
+    }
+
+    .main__Second__Img__Area{
+        grid-area: second__image;
+    }
+
+    .main__Text__Today__Area{
+        grid-area: text__today;
+    }
+
+    /* Style */
+    .main__Title__Style{
+        display: block;
+        font-family: 'perpetuaBOLD';
+        font-size: 1.4rem;
+        color: #596f91;
+        letter-spacing: 0.7px;
+
+        text-align: center;
+        padding: 0.4rem;
+        margin: 0.3rem;
+    }
+
+    .main__Subtitle__Style{
+        display: block;
+        font-family: 'perpetuaBOLD';
+        font-size: 1.2rem;
+        color: #596f91;
+        letter-spacing: 0.4px;
+
+        text-align: center;
+        padding: 0.5rem 0.3rem;
+        margin: 0.4rem 0.3rem;
+    }
+
+    .main__Text__Style{
+        font-family: 'perpetuaREGULAR';
+        font-size: 1.2rem;
+        color: #596f91;
+        letter-spacing: 0.2px;
+
+        padding: 0.2rem;
+        margin: 0.1rem;
+    }
+
+    .aside__Date__Style{
+        font-family: 'perpetuaBOLD';
+        font-size: 1.2rem;
+        color: #596f91;
+        letter-spacing: 0.2px;
+
+        padding: 0.1rem;
+        margin: 0.1rem;
+    }
+
+    .first__Img__Style{
+        width: 90%;
+        height: 100%;
+    }
+
+    .second__Img__Style{
+        width: 90%;
+        height: 100%;
+    } 
+
+  /* CONTACT CONTACT CONTACT CONTACT CONTACT */
+    /* GRIDS */
+    /* social grid */
+    .main__Section__Social__Grid{
+        display: grid;
+        grid-template-rows: 0.5fr 0.6fr 0.5fr;
+        row-gap: 0.2rem;
+        justify-items: center;
+        align-items: center;
+        grid-template-areas: "first__text" "social__icons" "second__text";
+    }
+    .section__Social__FirstText__Area{
+        grid-area: first__text;
+        
+    }
+    .section__Social__Icons__Area{
+        grid-area: social__icons;
+    }
+    .section__SecondText__Area{
+        grid-area: second__text;
+    }
+
+    .main__Form__Grid{
+        display: grid;
+        grid-template-columns: 0.2fr 1fr 0.5fr 0.5fr 1fr 1fr 0.2fr;
+        grid-template-rows: repeat(7, auto);
+        column-gap: 0.1rem;
+        row-gap: 0.5rem;
+        grid-template-areas: ". name name placeholder__name placeholder__name placeholder__name ." ". email email placeholder__email placeholder__email placeholder__email ." ". typeof typeof typeof merceria ojalyboton ." ". tel tel placeholder__tel placeholder__tel placeholder__tel ." ". consult consult textarea__consult textarea__consult textarea__consult ." ". text__robot text__robot . clean . ." ". fieldset__robot fieldset__robot . send send .";
+        margin-bottom: 1.5rem;
+    }
+    .form__Name__Area{
+        grid-area: name;
+        justify-self: center;
+    }
+    .form__Placeholder__Name__Area{
+        grid-area: placeholder__name;
+    }
+    .form__Email__Area{
+        grid-area: email;
+        justify-self: center;
+    }
+    .form__Placeholder__Email__Area{
+        grid-area: placeholder__email;
+    }
+    .form__TypeOf__Area{
+        grid-area: typeof;
+        justify-self: center;
+    }
+    .form__Input__Merceria__Area{
+        grid-area: merceria;
+    }
+    .form__Input__OjalYBoton__Area{
+        grid-area: ojalyboton;
+    }
+    .form__Tel__Area{
+        grid-area: tel;
+        justify-self: center;
+    }
+    .form__Placeholder__Tel__Area{
+        grid-area: placeholder__tel;
+    }
+    .form__Consult__Area{
+        grid-area: consult;
+        justify-self: center;
+    }
+    .form__TextArea__Consult__Area{
+        grid-area: textarea__consult;
+    }
+    .form__Input__Clean__Area{
+        grid-area: clean;
+        justify-self: flex-end;
+    }
+    .form__Text__Robot__Check{
+        grid-area: text__robot;
+    }
+    .form__Fieldset__Robot__Area{
+        grid-area: fieldset__robot;
+        justify-self: center;
+    }
+    .form__Input__Send__Area{
+        grid-area: send;
+        justify-self: center;
+    }
+
+    /* STYLES */
+    .main__Contact__Title__Style{
+        font-family: 'perpetuaBOLD';
+        font-size: 1.3rem;
+        color: #596f91;
+        text-align: center;
+        letter-spacing: 0.5px;
+
+        padding: 0.2rem 0.1rem;
+        margin: 0.3rem 0.2rem;
+    }
+
+    .section__Social__Text__Style{
+        font-family: 'perpetuaBOLD';
+        font-size: 1rem;
+        color: #596f91;
+        letter-spacing: 0.2px;
+        text-align: center;
+
+        padding: 0.5rem;
+        margin: 0.2rem;
+    }
+    .section__Social__Icons{
+        width: 2rem;
+        height: 2rem;
+        margin: 0rem 1rem;
+    }
+
+    .form__placeholder__style, .form__TextArea__Style{
+        background-color: #B4C5DE;
+        border: 1.5px solid #596f91;
+        opacity: 0.7;
+
+        font-family: 'perpetuaREGULAR';
+        font-size: 1rem;
+        max-width: 16.875rem;
+    }
+    .form__texts__style{
+        font-family: 'perpetuaBOLD';
+        font-size: 1.1rem;
+        color: #596f91;
+        letter-spacing: 0.2px;
+
+        margin-right: 0.2rem;
+    }
+
+    .form__label__Style, .form__Text__Robot__Style{
+        font-family: 'perpetuaREGULAR';
+        font-size: 1rem;
+        color: #596f91;
+        letter-spacing: 0.1px;
+    }
+    .form__fieldset__style{
+        background-color: #b4c5dece;
+        border: 1.5px solid #596f91;
+        max-width: 8rem;
+    }
+    .form__Text__Robot__Style{
+        text-align: center;
+    }
+
+    .form__Input__Clean__Style, .form__Input__Send__Style{
+        background-color: #b4c5dece;
+        border: 1px solid #596f91;
+        
+        font-family: 'perpetuaBOLD';
+        color: #596f91;
+    }
+
+    .form__Input__Clean__Style{
+        font-size: 1rem;
+        letter-spacing: 0.2px;
+        max-width: 4rem;
+        max-height: 1.5rem;
+    }
+
+    .form__Input__Send__Style{
+        font-size: 1.3rem;
+        letter-spacing: 0.4px;
+        max-width: 6rem;
+        max-height: 2rem;
+    }
+}
+
+/* OFERTAS OFERTAS OFERTAS OFERTAS */
+.main__Sale__Title{
+    text-align: center;
+    font-family: 'perpetua-titling-mt';
+    font-size: 1.5rem;
+    color: #596f91;
+
+    height: 10rem;
+    padding: 0.4rem;
+    margin: 0.3rem;
+}
+
+.main__Sale__Text{
+    text-align: center;
+    font-family: 'perpetuaBOLD';
+    font-size: 1.2rem;
+    color: #596f91;
+
+    height: 20rem;
+    padding: 0.3rem;
+    margin: 0.2rem;
+}
+
+.main__Sale__Link{
+    color: #596f91;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.451);
+    transition: 0.4s ease;
+}
+
+.main__Sale__Link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+    
