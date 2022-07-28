@@ -2567,5 +2567,18 @@ footer{
     cursor: pointer;
 }
 
+   /* Animaciones, transiciones entrega en github */
 
-    
+li ul li{
+    transition: 0.4s ease;
+}
+
+li ul li:hover{
+    color: #B4C5DE;
+    text-decoration-line: underline;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.div__Icon__Style:hover{
+    transform: scale(1.08);
+}
